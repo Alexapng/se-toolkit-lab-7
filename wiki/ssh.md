@@ -20,7 +20,7 @@
   - [Login with password](#login-with-password)
 - [`SSH` shell](#ssh-shell)
   - [Check whether you run an `SSH` shell](#check-whether-you-run-an-ssh-shell)
-- [Common errors](#common-errors)
+- [Troubleshooting](#troubleshooting)
   - [`Permission denied (publickey)`](#permission-denied-publickey)
   - [`Bad owner or permissions`](#bad-owner-or-permissions)
   - [`Connection timed out`](#connection-timed-out)
@@ -299,7 +299,12 @@ Commands you run in it execute on the remote machine, not on your local computer
    - is an [IP address](./computer-networks.md#ip-address), you run in an `SSH` shell.
    - `-`, you run on your local [machine](./computer-networks.md#machine) (computer).
 
-## Common errors
+## Troubleshooting
+
+<!-- no toc -->
+- [`Permission denied (publickey)`](#permission-denied-publickey)
+- [`Bad owner or permissions`](#bad-owner-or-permissions)
+- [`Connection timed out`](#connection-timed-out)
 
 ### `Permission denied (publickey)`
 
