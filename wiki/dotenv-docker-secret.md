@@ -27,21 +27,16 @@
   - [`PGADMIN_HOST_PORT`](#pgadmin_host_port)
 - [`caddy`](#caddy)
   - [`CADDY_CONTAINER_PORT`](#caddy_container_port)
+- [`Qwen Code` API](#qwen-code-api)
+  - [`QWEN_CODE_API_URL`](#qwen_code_api_url)
 - [LMS](#lms)
   - [`LMS_API_HOST_ADDRESS`](#lms_api_host_address)
   - [`LMS_API_HOST_PORT`](#lms_api_host_port)
   - [`LMS_API_KEY`](#lms_api_key)
-  - [`LMS_API_BASE_URL`](#lms_api_base_url)
 - [`Autochecker` API](#autochecker-api)
   - [`AUTOCHECKER_API_URL`](#autochecker_api_url)
   - [`AUTOCHECKER_API_LOGIN`](#autochecker_api_login)
   - [`AUTOCHECKER_API_PASSWORD`](#autochecker_api_password)
-- [Telegram bot](#telegram-bot)
-  - [`BOT_TOKEN`](#bot_token)
-- [LLM API](#llm-api)
-  - [`LLM_API_KEY`](#llm_api_key)
-  - [`LLM_API_BASE_URL`](#llm_api_base_url)
-  - [`LLM_API_MODEL`](#llm_api_model)
 - [Constants](#constants)
   - [`CONST_POSTGRESQL_SERVICE_NAME`](#const_postgresql_service_name)
   - [`CONST_POSTGRESQL_SERVER_NAME`](#const_postgresql_server_name)
@@ -204,6 +199,16 @@ The [port number](./computer-networks.md#port-number) that [`Caddy`](./caddy.md#
 
 Default: `80`
 
+## `Qwen Code` API
+
+Variable for the [`Qwen Code` API](./qwen-code-api.md#what-is-qwen-code-api) used by the [`caddy` service](./docker-compose-yml.md#caddy-service).
+
+### `QWEN_CODE_API_URL`
+
+The URL of the [`Qwen Code` API](./qwen-code-api.md#what-is-qwen-code-api) that [`Caddy`](./caddy.md#what-is-caddy) reverse-proxies requests to.
+
+Default: `http://qwen-code-api:8080`
+
 ## LMS
 
 Variables for the [LMS API](./lms-api.md#about-the-lms-api).
@@ -228,12 +233,6 @@ The [LMS API key](./lms-api.md#lms-api-key).
 
 Default: `<lms-api-key>`
 
-### `LMS_API_BASE_URL`
-
-The [LMS API base URL](./lms-api.md#lms-api-base-url).
-
-Default: `<lms-api-base-url>`
-
 ## `Autochecker` API
 
 Variables for the [autochecker](./autochecker.md#what-is-the-autochecker) ETL pipeline.
@@ -255,38 +254,6 @@ Default: `<autochecker-api-login>`
 The [`Autochecker` API password](./autochecker-api.md#autochecker-api-password).
 
 Default: `<autochecker-api-password>`.
-
-## Telegram bot
-
-Variables for the [Telegram bot](./bot.md#about-telegram-bots).
-
-### `BOT_TOKEN`
-
-The Telegram bot token obtained from [`@BotFather`](https://core.telegram.org/bots#botfather).
-
-Default: `<bot-token>`
-
-## LLM API
-
-Variables for the [LLM API](./llm-api.md#about-llm-api) that powers the [bot](./bot.md#about-telegram-bots).
-
-### `LLM_API_KEY`
-
-The [LLM API key](./llm-api.md#llm-api-key).
-
-Default: `<llm-api-key>`
-
-### `LLM_API_BASE_URL`
-
-The [LLM API base URL](./llm-api.md#llm-api-base-url).
-
-Default: `<llm-api-base-url>`
-
-### `LLM_API_MODEL`
-
-The [LLM API model](./llm-api.md#llm-api-model).
-
-Default: `<llm-api-model>`
 
 ## Constants
 
