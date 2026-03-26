@@ -12,7 +12,7 @@ ENV UV_COMPILE_BYTECODE=1 UV_LINK_MODE=copy
 # Omit development dependencies
 ENV UV_NO_DEV=1
 
-# Disable Python downloads, because we want to use the system interpreter
+# Disable Python downloads, because we want to use the system interpreterpnpm add -g @qwen-code/qwen-code
 # across both images. If using a managed Python version, it needs to be
 # copied from the build image into the final image; see `standalone.Dockerfile`
 # for an example.
@@ -23,9 +23,11 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     --mount=type=bind,source=uv.lock,target=uv.lock \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
     --mount=type=bind,source=backend/pyproject.toml,target=backend/pyproject.toml \
+    --mount=type=bind,source=bot/pyproject.toml,target=bot/pyproject.toml \
     uv sync --locked --no-install-project
 
 COPY backend /app/backend
+COPY bot/pyproject.toml /app/bot/pyproject.toml
 COPY pyproject.toml uv.lock /app/
 
 RUN --mount=type=cache,target=/root/.cache/uv \
