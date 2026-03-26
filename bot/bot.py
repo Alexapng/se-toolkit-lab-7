@@ -36,7 +36,7 @@ def handle_text(user_input: str) -> str:
     if command == "/labs":
         return handle_labs()
     if command == "/scores":
-        return handle_scores()
+        return handle_scores(normalized)
     return handle_unknown()
 
 
