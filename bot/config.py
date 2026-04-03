@@ -16,9 +16,7 @@ class BotConfig(BaseSettings):
     bot_token: str = ""
     lms_api_base_url: str = ""
     lms_api_key: str = ""
-    llm_api_base_url: str = ""
     llm_api_key: str = ""
-    llm_api_model: str = "coder-model"
 
     model_config = SettingsConfigDict(
         env_file=ENV_FILE,
